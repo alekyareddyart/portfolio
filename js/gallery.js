@@ -2,25 +2,25 @@
 // NOTE: gallery.html must NOT hardcode .art-card markup — cards are
 // rendered here only, once, to avoid duplicate rendering.
 const artworks = [
-  {"image": "images/art01.jpg", "width": 1276, "height": 1600, "title": "The colors of theyyam -The mask", "category": "Culture", "description": "Acrylic • 8 × 10 in"},
-  {"image": "images/art02.jpg", "width": 1600, "height": 1587, "title": "Radha-Krishna: A Quiet Devotion", "category": "Culture", "description": "Acrylic • 6 × 6 in"},
-  {"image": "images/art03.jpg", "width": 865, "height": 1078, "title": "Whispering Woods: The Enchanting Canopy", "category": "Nature", "description": "Acrylic • 8 × 10 in"},
-  {"image": "images/art04.jpg", "width": 684, "height": 862, "title": "Shade of prismatic soul", "category": "Imagination", "description": "Acrylic • 8 × 10 in"},
-  {"image": "images/art05.jpg", "width": 1600, "height": 1569, "title": "Whispering Pines, Aurora Sky", "category": "Nature", "description": "Acrylic • 6 × 6 in"},
-  {"image": "images/art06.jpg", "width": 849, "height": 831, "title": "A Jewel in Flight", "category": "Nature", "description": "Acrylic • 6 × 6 in"},
-  {"image": "images/art07.jpg", "width": 749, "height": 1009, "title": "Blush of Spring", "category": "Nature", "description": "Acrylic • 6 × 8 in"},
-  {"image": "images/art08.jpg", "width": 960, "height": 1280, "title": "Stories Beneath the Turbans", "category": "Culture", "description": "Acrylic • 6 × 8 in"},
-  {"image": "images/art09.jpg", "width": 1165, "height": 1175, "title": "Ripples of Serenity", "category": "Nature", "description": "Acrylic • 6 × 6 in"},
-  {"image": "images/art10.jpg", "width": 1600, "height": 1578, "title": "Pagoda Beneath a Starry Sky", "category": "Culture", "description": "Acrylic • 6 × 6 in"},
-  {"image": "images/art11.jpg", "width": 1278, "height": 1600, "title": "Blue Temple-Wat Rong Suea Ten", "category": "Culture", "description": "Acrylic • 8 × 10 in"},
-  {"image": "images/art12.jpg", "width": 1257, "height": 1600, "title": "The memories of secret chamber", "category": "Culture", "description": "Acrylic • 8 × 10 in"},
-  {"image": "images/art13.jpg", "width": 1200, "height": 1600, "title": "Little Companion", "category": "Nature", "description": "Acrylic • 6 × 6 in"},
-  {"image": "images/art14.jpg", "width": 1202, "height": 1600, "title": "Towers of Devotion", "category": "Culture", "description": "Acrylic • 6 × 8 in"},
-  {"image": "images/art15.jpg", "width": 720, "height": 1280, "title": "Where Magic Comes Home", "category": "Imagination", "description": "Acrylic • 6 × 8 in"},
-  {"image": "images/art16.jpg", "width": 720, "height": 1280, "title": "Valley of the Golden Sun", "category": "Nature", "description": "Acrylic • 6 × 8 in"},
-  {"image": "pics/any.jpg", "width": 1280, "height": 1084, "title": "Moss & sparkels", "category": "Nature", "description": "Acrylic • 14 × 12 in"},
-  {"image": "images/lakshmi-narayan.jpeg", "width": 960, "height": 1280, "title": "Lakshmi-Narayan Ardh swaroop", "category": "Culture", "description": "30 × 45 cm"},
-  {"image": "images/gargantua.jpeg", "width": 1024, "height": 1280, "title": "The infinity gargantua", "category": "Imagination", "description": "12 × 15 inches"}
+  {"image": "images/clean/art01.jpg", "width": 1263, "height": 1587, "title": "The colors of theyyam -The mask", "category": "Culture", "description": "Acrylic • 8 × 10 in"},
+  {"image": "images/clean/art02.jpg", "width": 1569, "height": 1563, "title": "Radha-Krishna: A Quiet Devotion", "category": "Culture", "description": "Acrylic • 6 × 6 in"},
+  {"image": "images/clean/art03.jpg", "width": 851, "height": 1066, "title": "Whispering Woods: The Enchanting Canopy", "category": "Nature", "description": "Acrylic • 8 × 10 in"},
+  {"image": "images/clean/art04.jpg", "width": 679, "height": 857, "title": "Shade of prismatic soul", "category": "Imagination", "description": "Acrylic • 8 × 10 in"},
+  {"image": "images/clean/art05.jpg", "width": 1589, "height": 1558, "title": "Whispering Pines, Aurora Sky", "category": "Nature", "description": "Acrylic • 6 × 6 in"},
+  {"image": "images/clean/art06.jpg", "width": 828, "height": 815, "title": "A Jewel in Flight", "category": "Nature", "description": "Acrylic • 6 × 6 in"},
+  {"image": "images/clean/art07.jpg", "width": 733, "height": 981, "title": "Blush of Spring", "category": "Nature", "description": "Acrylic • 6 × 8 in"},
+  {"image": "images/clean/art08.jpg", "width": 806, "height": 1085, "title": "Stories Beneath the Turbans", "category": "Culture", "description": "Acrylic • 6 × 8 in"},
+  {"image": "images/clean/art09.jpg", "width": 1158, "height": 1170, "title": "Ripples of Serenity", "category": "Nature", "description": "Acrylic • 6 × 6 in"},
+  {"image": "images/clean/art10.jpg", "width": 1593, "height": 1571, "title": "Pagoda Beneath a Starry Sky", "category": "Culture", "description": "Acrylic • 6 × 6 in"},
+  {"image": "images/clean/art11.jpg", "width": 1243, "height": 1563, "title": "Blue Temple-Wat Rong Suea Ten", "category": "Culture", "description": "Acrylic • 8 × 10 in"},
+  {"image": "images/clean/art12.jpg", "width": 1242, "height": 1578, "title": "The memories of secret chamber", "category": "Culture", "description": "Acrylic • 8 × 10 in"},
+  {"image": "images/clean/art13.jpg", "width": 916, "height": 907, "title": "Little Companion", "category": "Nature", "description": "Acrylic • 6 × 6 in"},
+  {"image": "images/clean/art14.jpg", "width": 1195, "height": 1593, "title": "Towers of Devotion", "category": "Culture", "description": "Acrylic • 6 × 8 in"},
+  {"image": "images/clean/art15.jpg", "width": 580, "height": 726, "title": "Where Magic Comes Home", "category": "Imagination", "description": "Acrylic • 6 × 8 in"},
+  {"image": "images/clean/art16.jpg", "width": 426, "height": 562, "title": "Valley of the Golden Sun", "category": "Nature", "description": "Acrylic • 6 × 8 in"},
+  {"image": "images/clean/any.jpg", "width": 1277, "height": 1081, "title": "Moss & sparkels", "category": "Nature", "description": "Acrylic • 14 × 12 in"},
+  {"image": "images/clean/lakshmi-narayan.jpg", "width": 954, "height": 952, "title": "Lakshmi-Narayan Ardh swaroop", "category": "Culture", "description": "30 × 45 cm"},
+  {"image": "images/clean/gargantua.jpg", "width": 706, "height": 1095, "title": "The infinity gargantua", "category": "Imagination", "description": "12 × 15 inches"}
 ];
 const CATEGORIES = ["All", "Culture", "Nature", "Imagination"];
 

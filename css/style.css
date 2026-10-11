@@ -76,7 +76,7 @@ min-height:100vh;
 min-height:100svh;
 padding:120px 0 90px;
 position:relative;
-background:url("../pics/any.jpg") center/cover no-repeat;
+background:url("../images/clean/any.jpg") center/cover no-repeat;
 display:flex;
 justify-content:center;
 align-items:center;
@@ -394,11 +394,13 @@ width:100%;
 margin-bottom:clamp(20px,3vw,35px);
 position:relative;
 overflow:hidden;
-border-radius:18px;
+border-radius:4px;
+border:1px solid #e5e0d8;
+padding:clamp(12px,1.2vw,18px);
 cursor:pointer;
 break-inside:avoid;
 background:white;
-transition:.4s;
+transition:transform .3s,box-shadow .3s;
 animation:fadeUp .8s ease both;
 }
 @keyframes fadeUp{
@@ -412,39 +414,24 @@ transform:translateY(0);
 }
 }
 .art-card:hover{
-transform:translateY(-8px);
-box-shadow:0 20px 45px rgba(0,0,0,.15);
+transform:translateY(-4px);
+box-shadow:0 14px 35px rgba(0,0,0,.1);
 }
 .art-card img{
 width:100%;
 height:auto;
 object-fit:contain;
 display:block;
-transition:.6s;
-}
-.art-card:hover img{
-transform:scale(1.08);
 }
 .art-info{
-position:absolute;
-left:0;
-bottom:0;
+position:static;
 width:100%;
-padding:clamp(20px,3vw,35px);
-background:linear-gradient(to top,
-    rgba(0,0,0,.85),
-    rgba(0,0,0,.05));
-color:white;
-opacity:0;
-transition:.45s;
-}
-.art-card:hover .art-info,
-.art-card:focus-within .art-info{
-opacity:1;
+padding:22px 8px 8px;
+color:#111;
 }
 .art-info h3{
 font-family:"Cormorant Garamond",serif;
-font-size:clamp(24px,2.5vw,36px);
+font-size:clamp(24px,2.3vw,32px);
 line-height:1.15;
 margin-bottom:10px;
 font-weight:500;
@@ -456,8 +443,8 @@ letter-spacing:3px;
 color:#999;
 }
 .art-info p{
-font-size:16px;
-opacity:.9;
+font-size:15px;
+color:#555;
 line-height:1.7;
 }
 .view-btn{
@@ -838,12 +825,10 @@ nav a{padding:16px var(--header-gutter);border-top:1px solid rgba(255,255,255,.0
 #lightbox img{max-height:calc(100vh - 260px);max-height:calc(100svh - 260px)}
 }
 
-/* Touch screens expose the captions without relying on a hover gesture. */
+/* Keep gallery interactions steady on touch screens. */
 @media(hover:none),(pointer:coarse),(max-width:600px){
-.art-info{position:static;opacity:1;background:none;color:#111;padding:18px 20px}
 .art-info h3{font-size:26px}
-.art-info p{font-size:15px;color:#555}
-.art-card:hover,.art-card:hover img{transform:none}
+.art-card:hover{transform:none}
 }
 
 @media(max-height:500px) and (min-width:601px){
