@@ -2,31 +2,27 @@
 // NOTE: gallery.html must NOT hardcode .art-card markup — cards are
 // rendered here only, once, to avoid duplicate rendering.
 const artworks = [
-  { image: "images/art01.jpg", width: 1276, height: 1600, title: "The colors of theyyam -The mask", category: "Acrylic",         description: "Acrylic • 8 × 10 in" },
-  { image: "images/art02.jpg", width: 1600, height: 1587, title: "", category: "Acrylic",     description: "Acrylic • 6 × 6 in" },
-  { image: "images/art03.jpg", width: 865, height: 1078, title: "Whispering Woods: The Enchanting Canopy", category: "Acrylic",  description: "Acrylic • 8 × 10 in" },
-  { image: "images/art04.jpg", width: 684, height: 862, title: "Shade of prismatic soul", category: "Acrylic", description: "Acrylic • 8 × 10 in" },
-  { image: "images/art05.jpg", width: 1600, height: 1569, title: "Artwork 05", category: "Acrylic",         description: "Acrylic • 6 × 6 in" },
-  { image: "images/art06.jpg", width: 849, height: 831, title: "Artwork 06", category: "Acrylic",     description: "Acrylic • 6 × 6 in" },
-  { image: "images/art07.jpg", width: 749, height: 1009, title: "Artwork 07", category: "Acrylic",         description: "Acrylic • 6 × 8 in" },
-  { image: "images/art08.jpg", width: 960, height: 1280, title: "Artwork 08", category: "Acrylic",     description: "Acrylic • 6 × 8 in" },
-  { image: "images/art09.jpg", width: 1165, height: 1175, title: "Artwork 09", category: "Acrylic",  description: "Acrylic • 6 × 6 in" },
-  { image: "images/art10.jpg", width: 1600, height: 1578, title: "Artwork 10", category: "Acrylic",         description: "Acrylic • 6 × 6 in" },
-  { image: "images/art11.jpg", width: 1278, height: 1600, title: "Blue Temple-Wat Rong Suea Ten", category: "Acrylic",         description: "Acrylic • 8 × 10 in" },
-  { image: "images/art12.jpg", width: 1257, height: 1600, title: "The memories of secret chamber", category: "Acrylic", description: "Acrylic • 8 × 10 in" },
-  { image: "images/art13.jpg", width: 1200, height: 1600, title: "Artwork 13", category: "Acrylic",         description: "Acrylic • 6 × 6 in" },
-  { image: "images/art14.jpg", width: 1202, height: 1600, title: "Artwork 14", category: "Acrylic", description: "Acrylic • 6 × 8 in" },
-  { image: "images/art15.jpg", width: 720, height: 1280, title: "Artwork 15", category: "Acrylic",     description: "Acrylic • 6 × 8 in" },
-  { image: "images/art16.jpg", width: 720, height: 1280, title: "Artwork 16", category: "Acrylic",         description: "Acrylic • 6 × 8 in" },
-  { image: "pics/any.jpg", width: 1280, height: 1084, title: "Moss & sparkels", category: "Acrylic",         description: "Acrylic • 14 × 12 in" }
+  {"image": "images/art01.jpg", "width": 1276, "height": 1600, "title": "The colors of theyyam -The mask", "category": "Culture", "description": "Acrylic • 8 × 10 in"},
+  {"image": "images/art02.jpg", "width": 1600, "height": 1587, "title": "Radha-Krishna: A Quiet Devotion", "category": "Culture", "description": "Acrylic • 6 × 6 in"},
+  {"image": "images/art03.jpg", "width": 865, "height": 1078, "title": "Whispering Woods: The Enchanting Canopy", "category": "Nature", "description": "Acrylic • 8 × 10 in"},
+  {"image": "images/art04.jpg", "width": 684, "height": 862, "title": "Shade of prismatic soul", "category": "Imagination", "description": "Acrylic • 8 × 10 in"},
+  {"image": "images/art05.jpg", "width": 1600, "height": 1569, "title": "Whispering Pines, Aurora Sky", "category": "Nature", "description": "Acrylic • 6 × 6 in"},
+  {"image": "images/art06.jpg", "width": 849, "height": 831, "title": "A Jewel in Flight", "category": "Nature", "description": "Acrylic • 6 × 6 in"},
+  {"image": "images/art07.jpg", "width": 749, "height": 1009, "title": "Blush of Spring", "category": "Nature", "description": "Acrylic • 6 × 8 in"},
+  {"image": "images/art08.jpg", "width": 960, "height": 1280, "title": "Stories Beneath the Turbans", "category": "Culture", "description": "Acrylic • 6 × 8 in"},
+  {"image": "images/art09.jpg", "width": 1165, "height": 1175, "title": "Ripples of Serenity", "category": "Nature", "description": "Acrylic • 6 × 6 in"},
+  {"image": "images/art10.jpg", "width": 1600, "height": 1578, "title": "Pagoda Beneath a Starry Sky", "category": "Culture", "description": "Acrylic • 6 × 6 in"},
+  {"image": "images/art11.jpg", "width": 1278, "height": 1600, "title": "Blue Temple-Wat Rong Suea Ten", "category": "Culture", "description": "Acrylic • 8 × 10 in"},
+  {"image": "images/art12.jpg", "width": 1257, "height": 1600, "title": "The memories of secret chamber", "category": "Culture", "description": "Acrylic • 8 × 10 in"},
+  {"image": "images/art13.jpg", "width": 1200, "height": 1600, "title": "Little Companion", "category": "Nature", "description": "Acrylic • 6 × 6 in"},
+  {"image": "images/art14.jpg", "width": 1202, "height": 1600, "title": "Towers of Devotion", "category": "Culture", "description": "Acrylic • 6 × 8 in"},
+  {"image": "images/art15.jpg", "width": 720, "height": 1280, "title": "Where Magic Comes Home", "category": "Imagination", "description": "Acrylic • 6 × 8 in"},
+  {"image": "images/art16.jpg", "width": 720, "height": 1280, "title": "Valley of the Golden Sun", "category": "Nature", "description": "Acrylic • 6 × 8 in"},
+  {"image": "pics/any.jpg", "width": 1280, "height": 1084, "title": "Moss & sparkels", "category": "Nature", "description": "Acrylic • 14 × 12 in"},
+  {"image": "images/lakshmi-narayan.jpeg", "width": 960, "height": 1280, "title": "Lakshmi-Narayan Ardh swaroop", "category": "Culture", "description": "30 × 45 cm"},
+  {"image": "images/gargantua.jpeg", "width": 1024, "height": 1280, "title": "The infinity gargantua", "category": "Imagination", "description": "12 × 15 inches"}
 ];
-// Artwork 17 was removed: its image file was byte-identical to Artwork 05
-// (both were copies of images/art1.jpg used as the homepage feature image),
-// but listed with a different medium/size — i.e. the same painting was
-// presented twice under contradictory captions. Add a genuine 17th piece
-// here (with its own image file) when one is available.
-
-const CATEGORIES = ["All", "Oil", "Acrylic", "Watercolor", "Mixed Media"];
+const CATEGORIES = ["All", "Culture", "Nature", "Imagination"];
 
 const gallery = document.getElementById("gallery-grid");
 const filterBar = document.getElementById("gallery-filter");
