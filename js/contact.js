@@ -4,7 +4,7 @@
 // a service like Formspree / Netlify Forms / EmailJS, replace the submit
 // handler below with a fetch() call to that endpoint.
 
-const CONTACT_EMAIL = "hello@example.com"; // ← replace with your real inbox
+const CONTACT_EMAIL = "alekyareddyarts@gmail.com";
 
 const form = document.getElementById("contact-form");
 const status = document.getElementById("form-status");
