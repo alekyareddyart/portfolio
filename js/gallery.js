@@ -16,7 +16,7 @@ const artworks = [
   {"image": "images/clean/art12.jpg", "width": 1242, "height": 1578, "title": "The memories of secret chamber", "category": "Culture", "description": "Acrylic • 8 × 10 in"},
   {"image": "images/clean/art13.jpg", "width": 916, "height": 907, "title": "Little Companion", "category": "Nature", "description": "Acrylic • 6 × 6 in"},
   {"image": "images/clean/art14.jpg", "width": 1195, "height": 1593, "title": "Towers of Devotion", "category": "Culture", "description": "Acrylic • 6 × 8 in"},
-  {"image": "images/clean/art15.jpg", "width": 580, "height": 726, "title": "Where Magic Comes Home", "category": "Imagination", "description": "Acrylic • 6 × 8 in"},
+  {"image": "images/clean/art15-straightened.jpg", "width": 562, "height": 754, "title": "Where Magic Comes Home", "category": "Imagination", "description": "Acrylic • 6 × 8 in"},
   {"image": "images/clean/art16.jpg", "width": 426, "height": 562, "title": "Valley of the Golden Sun", "category": "Nature", "description": "Acrylic • 6 × 8 in"},
   {"image": "images/clean/any.jpg", "width": 1277, "height": 1081, "title": "Moss & sparkels", "category": "Nature", "description": "Acrylic • 14 × 12 in"},
   {"image": "images/clean/lakshmi-narayan.jpg", "width": 954, "height": 952, "title": "Lakshmi-Narayan Ardh swaroop", "category": "Culture", "description": "30 × 45 cm"},
