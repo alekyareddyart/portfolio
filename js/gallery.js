@@ -2,23 +2,23 @@
 // NOTE: gallery.html must NOT hardcode .art-card markup — cards are
 // rendered here only, once, to avoid duplicate rendering.
 const artworks = [
-  { image: "images/art01.jpg", title: "The colors of theyyam -The mask", category: "Acrylic",         description: "Acrylic • 8 × 10 in" },
-  { image: "images/art02.jpg", title: "", category: "Acrylic",     description: "Acrylic • 6 × 6 in" },
-  { image: "images/art03.jpg", title: "Whispering Woods: The Enchanting Canopy", category: "Acrylic",  description: "Acrylic • 8 × 10 in" },
-  { image: "images/art04.jpg", title: "Shade of prismatic soul", category: "Acrylic", description: "Acrylic • 8 × 10 in" },
-  { image: "images/art05.jpg", title: "Artwork 05", category: "Acrylic",         description: "Acrylic • 6 × 6 in" },
-  { image: "images/art06.jpg", title: "Artwork 06", category: "Acrylic",     description: "Acrylic • 6 × 6 in" },
-  { image: "images/art07.jpg", title: "Artwork 07", category: "Acrylic",         description: "Acrylic • 6 × 8 in" },
-  { image: "images/art08.jpg", title: "Artwork 08", category: "Acrylic",     description: "Acrylic • 6 × 8 in" },
-  { image: "images/art09.jpg", title: "Artwork 09", category: "Acrylic",  description: "Acrylic • 6 × 6 in" },
-  { image: "images/art10.jpg", title: "Artwork 10", category: "Acrylic",         description: "Acrylic • 6 × 6 in" },
-  { image: "images/art11.jpg", title: "Blue Temple-Wat Rong Suea Ten", category: "Acrylic",         description: "Acrylic • 8 × 10 in" },
-  { image: "images/art12.jpg", title: "The memories of secret chamber", category: "Acrylic", description: "Acrylic • 8 × 10 in" },
-  { image: "images/art13.jpg", title: "Artwork 13", category: "Acrylic",         description: "Acrylic • 6 × 6 in" },
-  { image: "images/art14.jpg", title: "Artwork 14", category: "Acrylic", description: "Acrylic • 6 × 8 in" },
-  { image: "images/art15.jpg", title: "Artwork 15", category: "Acrylic",     description: "Acrylic • 6 × 8 in" },
-  { image: "images/art16.jpg", title: "Artwork 16", category: "Acrylic",         description: "Acrylic • 6 × 8 in" },
-  { image: "pics/any.jpg", title: "Moss & sparkels", category: "Acrylic",         description: "Acrylic • 14 × 12 in" }
+  { image: "images/art01.jpg", width: 1276, height: 1600, title: "The colors of theyyam -The mask", category: "Acrylic",         description: "Acrylic • 8 × 10 in" },
+  { image: "images/art02.jpg", width: 1600, height: 1587, title: "", category: "Acrylic",     description: "Acrylic • 6 × 6 in" },
+  { image: "images/art03.jpg", width: 865, height: 1078, title: "Whispering Woods: The Enchanting Canopy", category: "Acrylic",  description: "Acrylic • 8 × 10 in" },
+  { image: "images/art04.jpg", width: 684, height: 862, title: "Shade of prismatic soul", category: "Acrylic", description: "Acrylic • 8 × 10 in" },
+  { image: "images/art05.jpg", width: 1600, height: 1569, title: "Artwork 05", category: "Acrylic",         description: "Acrylic • 6 × 6 in" },
+  { image: "images/art06.jpg", width: 849, height: 831, title: "Artwork 06", category: "Acrylic",     description: "Acrylic • 6 × 6 in" },
+  { image: "images/art07.jpg", width: 749, height: 1009, title: "Artwork 07", category: "Acrylic",         description: "Acrylic • 6 × 8 in" },
+  { image: "images/art08.jpg", width: 960, height: 1280, title: "Artwork 08", category: "Acrylic",     description: "Acrylic • 6 × 8 in" },
+  { image: "images/art09.jpg", width: 1165, height: 1175, title: "Artwork 09", category: "Acrylic",  description: "Acrylic • 6 × 6 in" },
+  { image: "images/art10.jpg", width: 1600, height: 1578, title: "Artwork 10", category: "Acrylic",         description: "Acrylic • 6 × 6 in" },
+  { image: "images/art11.jpg", width: 1278, height: 1600, title: "Blue Temple-Wat Rong Suea Ten", category: "Acrylic",         description: "Acrylic • 8 × 10 in" },
+  { image: "images/art12.jpg", width: 1257, height: 1600, title: "The memories of secret chamber", category: "Acrylic", description: "Acrylic • 8 × 10 in" },
+  { image: "images/art13.jpg", width: 1200, height: 1600, title: "Artwork 13", category: "Acrylic",         description: "Acrylic • 6 × 6 in" },
+  { image: "images/art14.jpg", width: 1202, height: 1600, title: "Artwork 14", category: "Acrylic", description: "Acrylic • 6 × 8 in" },
+  { image: "images/art15.jpg", width: 720, height: 1280, title: "Artwork 15", category: "Acrylic",     description: "Acrylic • 6 × 8 in" },
+  { image: "images/art16.jpg", width: 720, height: 1280, title: "Artwork 16", category: "Acrylic",         description: "Acrylic • 6 × 8 in" },
+  { image: "pics/any.jpg", width: 1280, height: 1084, title: "Moss & sparkels", category: "Acrylic",         description: "Acrylic • 14 × 12 in" }
 ];
 // Artwork 17 was removed: its image file was byte-identical to Artwork 05
 // (both were copies of images/art1.jpg used as the homepage feature image),
@@ -41,11 +41,20 @@ const nextBtn = document.getElementById("next");
 let activeFilter = "All";
 let visible = artworks; // the list currently on screen, kept in sync with the filter
 let currentIndex = 0;
+let lightboxIsOpen = false;
+let returnFocusTo = null;
+let previousOverflow = "";
+
+function escapeHtml(value) {
+  return String(value).replace(/[&<>"']/g, character => ({
+    "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+  })[character]);
+}
 
 function renderFilters() {
   if (!filterBar) return;
   filterBar.innerHTML = CATEGORIES.map(
-    (cat) => `<button type="button" data-filter="${cat}" class="${cat === activeFilter ? "active" : ""}">${cat}</button>`
+    (cat) => `<button type="button" data-filter="${cat}" aria-pressed="${cat === activeFilter}" class="${cat === activeFilter ? "active" : ""}">${cat}</button>`
   ).join("");
 }
 
@@ -59,11 +68,11 @@ function renderGallery() {
     .map(
       (art, i) => `
       <div class="art-card" data-index="${i}">
-        <img src="${art.image}" alt="${art.title} — ${art.description}" loading="lazy">
+        <img src="${art.image}" width="${art.width}" height="${art.height}" alt="${escapeHtml(art.title || "Untitled artwork")} — ${escapeHtml(art.description)}" loading="lazy" decoding="async">
         <div class="art-info">
-          <h3>${art.title}</h3>
-          <p>${art.description}</p>
-          <a class="view-btn">View Artwork →</a>
+          <h3>${escapeHtml(art.title || "Untitled artwork")}</h3>
+          <p>${escapeHtml(art.description)}</p>
+          <button type="button" class="view-btn" aria-label="View ${escapeHtml(art.title || "Untitled artwork")}">View Artwork →</button>
         </div>
       </div>
     `
@@ -80,21 +89,31 @@ function setFilter(cat) {
 function updateLightboxContent() {
   const art = visible[currentIndex];
   lightboxImg.src = art.image;
-  lightboxImg.alt = art.title;
-  if (lightboxTitle) lightboxTitle.textContent = art.title;
+  lightboxImg.alt = art.title || "Untitled artwork";
+  lightboxImg.width = art.width;
+  lightboxImg.height = art.height;
+  if (lightboxTitle) lightboxTitle.textContent = art.title || "Untitled artwork";
   if (lightboxDesc) lightboxDesc.textContent = art.description;
 }
 
-function openLightbox(index) {
+function openLightbox(index, trigger) {
   currentIndex = index;
+  returnFocusTo = trigger;
+  previousOverflow = document.body.style.overflow;
   updateLightboxContent();
-  lightbox.style.display = "flex";
+  lightboxIsOpen = true;
+  lightbox.style.display = "grid";
+  lightbox.setAttribute("aria-hidden", "false");
   document.body.style.overflow = "hidden";
+  closeBtn.focus({ preventScroll: true });
 }
 
 function closeLightbox() {
   lightbox.style.display = "none";
-  document.body.style.overflow = "";
+  lightbox.setAttribute("aria-hidden", "true");
+  lightboxIsOpen = false;
+  document.body.style.overflow = previousOverflow;
+  if (returnFocusTo && returnFocusTo.isConnected) returnFocusTo.focus({ preventScroll: true });
 }
 
 function showPrev() {
@@ -120,7 +139,7 @@ if (filterBar) {
 gallery.addEventListener("click", (e) => {
   const card = e.target.closest(".art-card");
   if (card) {
-    openLightbox(Number(card.dataset.index));
+    openLightbox(Number(card.dataset.index), card.querySelector(".view-btn"));
   }
 });
 
@@ -141,8 +160,26 @@ lightbox.addEventListener("click", (e) => {
 });
 
 document.addEventListener("keydown", (e) => {
-  if (lightbox.style.display !== "flex") return;
-  if (e.key === "Escape") closeLightbox();
-  if (e.key === "ArrowLeft") showPrev();
-  if (e.key === "ArrowRight") showNext();
+  if (!lightboxIsOpen) return;
+  if (e.key === "Escape") {
+    e.preventDefault();
+    closeLightbox();
+  }
+  if (e.key === "ArrowLeft") {
+    e.preventDefault();
+    showPrev();
+  }
+  if (e.key === "ArrowRight") {
+    e.preventDefault();
+    showNext();
+  }
+  if (e.key === "Tab") {
+    if (e.shiftKey && document.activeElement === closeBtn) {
+      e.preventDefault();
+      nextBtn.focus();
+    } else if (!e.shiftKey && document.activeElement === nextBtn) {
+      e.preventDefault();
+      closeBtn.focus();
+    }
+  }
 });

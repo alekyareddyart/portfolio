@@ -4,7 +4,7 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
 <title>Contact | Alekya</title>
 <meta name="description" content="Get in touch with Alekya for commissions, collaborations, or general inquiries.">
@@ -21,7 +21,7 @@
 
 </head>
 
-<body>
+<body class="inner-page">
 
 <div id="progress-bar"></div>
 <header>
@@ -30,16 +30,16 @@
 ALEKYA
 </div>
 
-<nav>
+<button type="button" class="nav-toggle" aria-controls="site-nav" aria-label="Toggle menu" aria-expanded="false">
+<span></span><span></span><span></span>
+</button>
+
+<nav id="site-nav">
 <a href="index.html">Home</a>
 <a href="gallery.html">Gallery</a>
 <a href="about.html">About</a>
 <a href="contact.html">Contact</a>
 </nav>
-
-<button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
-<span></span><span></span><span></span>
-</button>
 
 </header>
 
@@ -78,10 +78,10 @@ ALEKYA
         <form id="contact-form" class="contact-form" novalidate>
 
             <label for="name">Name</label>
-            <input type="text" id="name" name="name" required>
+            <input type="text" id="name" name="name" autocomplete="name" required>
 
             <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" autocomplete="email" inputmode="email" autocapitalize="none" required>
 
             <label for="message">Message</label>
             <textarea id="message" name="message" required></textarea>

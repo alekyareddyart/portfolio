@@ -1,99 +1,64 @@
-// ================= NAVBAR =================
-
 const header = document.querySelector("header");
-
-window.addEventListener("scroll", () => {
-
-    if (window.scrollY > 100) {
-
-        header.classList.add("scrolled");
-
-    } else {
-
-        header.classList.remove("scrolled");
-
-    }
-
-});
-
-// ================= MOBILE MENU =================
-// Previously nav{display:none} below 768px had no alternative way in —
-// on mobile the Gallery/About/Contact links were completely unreachable.
-
+const progress = document.getElementById("progress-bar");
 const navToggle = document.querySelector(".nav-toggle");
 const nav = document.querySelector("header nav");
 
-if (navToggle && nav) {
-
-    navToggle.addEventListener("click", () => {
-
-        const isOpen = header.classList.toggle("nav-open");
-        navToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
-
-    });
-
-    nav.querySelectorAll("a").forEach(link => {
-
-        link.addEventListener("click", () => {
-
-            header.classList.remove("nav-open");
-            navToggle.setAttribute("aria-expanded", "false");
-
-        });
-
-    });
-
-    window.addEventListener("resize", () => {
-
-        if (window.innerWidth > 768) {
-
-            header.classList.remove("nav-open");
-            navToggle.setAttribute("aria-expanded", "false");
-
-        }
-
-    });
-
+function updateScrollState() {
+  if (header) header.classList.toggle("scrolled", window.scrollY > 100);
+  if (progress) {
+    const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const percentage = totalHeight > 0 ? (window.scrollY / totalHeight) * 100 : 0;
+    progress.style.width = `${Math.min(100, Math.max(0, percentage))}%`;
+  }
 }
 
-// ================= FADE ANIMATION =================
+window.addEventListener("scroll", updateScrollState, { passive: true });
+window.addEventListener("resize", updateScrollState);
+updateScrollState();
 
-const observer = new IntersectionObserver((entries) => {
+if (header && navToggle && nav) {
+  function setMenuOpen(isOpen) {
+    header.classList.toggle("nav-open", isOpen);
+    navToggle.setAttribute("aria-expanded", String(isOpen));
+  }
 
+  navToggle.addEventListener("click", () => {
+    setMenuOpen(!header.classList.contains("nav-open"));
+  });
+
+  nav.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => setMenuOpen(false));
+  });
+
+  document.addEventListener("click", event => {
+    if (!header.contains(event.target)) setMenuOpen(false);
+  });
+
+  document.addEventListener("keydown", event => {
+    if (event.key === "Escape" && header.classList.contains("nav-open")) {
+      setMenuOpen(false);
+      navToggle.focus();
+    }
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 900) setMenuOpen(false);
+  });
+}
+
+// Content stays visible when motion is reduced or this API is unavailable.
+if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
-
-        if (entry.isIntersecting) {
-
-            entry.target.classList.add("show");
-
-        }
-
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+        observer.unobserve(entry.target);
+      }
     });
+  });
 
-});
-
-document.querySelectorAll("section").forEach(section => {
-
+  document.querySelectorAll("section").forEach(section => {
     section.classList.add("hidden");
-
     observer.observe(section);
-
-});
-
-
-// ================= SCROLL BAR =================
-
-const progress = document.getElementById("progress-bar");
-
-window.addEventListener("scroll", () => {
-
-    const totalHeight =
-        document.documentElement.scrollHeight -
-        window.innerHeight;
-
-    const progressHeight =
-        (window.scrollY / totalHeight) * 100;
-
-    progress.style.width = progressHeight + "%";
-
-});
+  });
+}

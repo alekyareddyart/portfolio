@@ -5,7 +5,7 @@
 
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
     <title>Gallery | Alekya</title>
     <meta name="description" content="Browse the full gallery of original paintings by Alekya — oil, acrylic, watercolor and mixed media works.">
@@ -23,7 +23,7 @@
 
 </head>
 
-<body>
+<body class="inner-page">
 
 <div id="progress-bar"></div>
 
@@ -33,7 +33,11 @@
         ALEKYA
     </div>
 
-    <nav>
+    <button type="button" class="nav-toggle" aria-controls="site-nav" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+    </button>
+
+<nav id="site-nav">
 
         <a href="index.html">Home</a>
         <a href="gallery.html">Gallery</a>
@@ -41,10 +45,6 @@
         <a href="contact.html">Contact</a>
 
     </nav>
-
-    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-    </button>
 
 </header>
 
@@ -71,17 +71,20 @@
 
 </section>
 
-<div id="lightbox">
+<div id="lightbox" role="dialog" aria-modal="true" aria-labelledby="lightbox-title" aria-hidden="true">
 
     <button id="close" aria-label="Close">&times;</button>
 
     <button id="prev" aria-label="Previous artwork">&#10094;</button>
 
-    <img id="lightbox-img">
+    <div class="lightbox-view">
+    <img id="lightbox-img" alt="">
 
     <div class="lightbox-info">
         <h2 id="lightbox-title"></h2>
         <p id="lightbox-desc"></p>
+    </div>
+
     </div>
 
     <button id="next" aria-label="Next artwork">&#10095;</button>
