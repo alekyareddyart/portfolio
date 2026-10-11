@@ -590,8 +590,8 @@ margin:0;
 }
 .portrait-frame{
 aspect-ratio:4/5;
-border:8px solid #fff;
-box-shadow:0 0 0 1px #ded4c5;
+border:0;
+box-shadow:none;
 overflow:hidden;
 }
 .portrait-frame img{
