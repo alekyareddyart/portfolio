@@ -439,6 +439,42 @@ background:#111;
 color:white;
 }
 
+.gallery-section-heading{
+padding:0 var(--content-gutter);
+margin:0 auto clamp(24px,3vw,38px);
+max-width:1600px;
+}
+.gallery-section-heading span{
+font-size:12px;
+letter-spacing:3px;
+color:#796951;
+}
+.gallery-section-heading h2{
+font-family:"Cormorant Garamond",serif;
+font-size:clamp(34px,4.5vw,56px);
+font-weight:500;
+line-height:1.15;
+margin:10px 0 0;
+}
+
+.gallery-section-heading{
+padding:0 var(--content-gutter);
+margin:0 auto clamp(24px,3vw,38px);
+max-width:1600px;
+}
+.gallery-section-heading span{
+font-size:12px;
+letter-spacing:3px;
+color:#796951;
+}
+.gallery-section-heading h2{
+font-family:"Cormorant Garamond",serif;
+font-size:clamp(34px,4.5vw,56px);
+font-weight:500;
+line-height:1.15;
+margin:10px 0 0;
+}
+
 #gallery-grid{
 columns:3;
 column-gap:clamp(20px,3vw,35px);

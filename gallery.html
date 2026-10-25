@@ -13,7 +13,7 @@
     <meta property="og:type" content="website">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
 
-    <link rel="stylesheet" href="css/style.css?v=c46f7ab4bc11">
+    <link rel="stylesheet" href="css/style.css?v=8cdf6173a7bf">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
@@ -59,7 +59,7 @@
     </p>
 
 </section>
-<div class="gallery-filter" id="gallery-filter" role="group" aria-label="Filter artworks by theme">
+<div class="gallery-filter" id="gallery-filter" role="group" aria-label="Filter artwork collections and themes">
 </div>
 
 <section class="gallery-page">
@@ -67,6 +67,11 @@
 <!-- Cards are rendered by js/gallery.js from a single artworks array.
      Do NOT hardcode .art-card markup here — that previously caused every
      artwork to render twice (once from this HTML, once from the script). -->
+<div class="gallery-section-heading" aria-live="polite">
+    <span id="gallery-section-eyebrow">ARTWORK COLLECTION</span>
+    <h2 id="gallery-section-title">All artworks</h2>
+</div>
+
 <div id="gallery-grid"></div>
 
 </section>
@@ -91,7 +96,7 @@
 
 </div>
 
-<script src="js/gallery.js?v=00095a50f5ec"></script>
+<script src="js/gallery.js?v=f2294dc3a4fc"></script>
 
 <script src="js/script.js?v=9c91d0d08d55"></script>
 
