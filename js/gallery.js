@@ -22,7 +22,7 @@ const artworks = [
   {"image": "images/clean/lakshmi-narayan.jpg", "width": 954, "height": 952, "title": "Lakshmi-Narayan Ardh swaroop", "category": "Culture", "description": "12 × 15 inches", "original": true},
   {"image": "images/clean/gargantua.jpg", "width": 706, "height": 1095, "title": "The infinity gargantua", "category": "Imagination", "description": "30 × 45 cm", "original": true},
   {"image": "images/clean/quiet-homecoming.jpg", "width": 245, "height": 189, "title": "A Walk Beside the Stream", "category": "Culture", "description": "Original artwork", "original": true},
-  {"image": "images/clean/hawkins-after-dark.jpg", "width": 900, "height": 1200, "title": "Hawkins after dark", "category": "Imagination", "description": "30 × 40 cm"}
+  {"image": "images/clean/hawkins-after-dark.jpg?v=65badb33f9f", "width": 900, "height": 1200, "title": "Hawkins after dark", "category": "Imagination", "description": "30 × 40 cm"}
 ];
 const CATEGORIES = ["All", "Culture", "Nature", "Imagination", "Originals"];
 
